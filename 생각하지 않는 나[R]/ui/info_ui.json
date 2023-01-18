@@ -1,0 +1,211 @@
+{
+	"namespace": "info_ui",
+	"total":{
+		"type": "panel",
+		"bindings": [
+			{
+				"binding_name": "#title_text",
+				"binding_type": "global"
+			},
+			{
+				"binding_type": "view",
+				"source_property_name": "(#title_text = 'watts.ui.info_ui')",
+				"target_property_name": "#visible"
+			}
+		],	
+		"controls": [
+			{
+				"buttons_1":{
+					"type": "panel",
+					"clips_children": true,
+					"size": [80, 18],
+					"offset": [12, 12],
+					"layer":25,
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"controls": [
+						{
+							
+							"button1@watts_common.stat_buttons_panel":{
+								"anchor_from": "top_left",
+								"anchor_to": "top_left",
+								"$size": [80, 180],
+								"$offset": [5, -162]
+							}
+						},
+						{
+							"prevent":{
+								"type": "button",
+								"layer": 24,
+								"prevent_touch_input": true,
+								"anchor_from": "top_left",
+								"anchor_to": "top_left",
+								"$size": [80, 180],
+								"$offset": [5, -162]
+							}
+						}
+					]
+				}
+			},
+			{
+				"stat":{
+					"type": "panel",
+					"size": [0, 0],
+					"layer":1,
+					"offset": [ -0, 0 ],
+					"controls": [			
+						{
+							"buttons_1@scrolling_panel":{
+								"anchor_from": "center",
+								"anchor_to": "center",
+								"offset": [0, 0 ]
+							}
+						},
+						{
+							"close_button_holder@watts_common.close_button": {
+								"anchor_from": "center",
+								"anchor_to": "center",
+								"layer":21,
+								"offset": [75, -80 ]
+							}
+						}
+					]
+				}
+			}
+		]
+	},
+	    
+      
+    "scrolling_panel@common.scrolling_panel": {
+
+        "anchor_from": "top_left",
+        "$show_background": false,
+        "size": [135, 172],
+        "$scrolling_content": "info_ui.buttons_1",
+        "$scroll_size": [5, 172],
+        "$scrolling_pane_size":[135, 172],
+        "$scrolling_pane_offset": [ 2, 0 ],
+        "$scroll_bar_right_padding_size": [ 0, 0 ]
+    },
+	"buttons_1":{
+		"type": "panel",
+		"clips_children": true,
+		"size": [131, 170],
+		"offset": [0, 0],
+		"layer":1,
+		"controls": [
+			{
+				"buttons_1":{
+					"type": "panel",
+					"clips_children": true,
+					"size": [170, 162],
+					"offset": [2,0],
+					"layer":25,
+					"anchor_from": "left_middle",
+					"anchor_to": "left_middle",
+					"controls": [
+						{
+							
+							"button1@watts_common.stat_buttons_panel":{
+								"$size": [170, 162],
+								"$offset": [-2, 0]
+							}
+						}
+					]
+				}
+			},
+			{
+				"prevent":{
+					"type": "button",
+					"layer": 24,
+					"prevent_touch_input": true,
+					"size": [48, 162],
+					"anchor_from": "right_middle",
+					"anchor_to": "right_middle",
+					"$offset": [8, 0]
+				}
+			},
+			{
+				"text1@watts_common.text_buttons_panel":{
+					"anchor_from": "right_middle",
+					"anchor_to": "right_middle",
+					"$size": [48, 162],
+					"clips_children": true,
+					"$offset": [8, 0]
+				}
+			},
+			{
+				"background":{
+					"texture": "textures/ui/watts/box",
+					"anchor_from": "center",
+					"anchor_to": "center",
+					"size": [131, 168],
+					"type":"image",
+					"offset": [0, 0]
+				}
+			}
+		]
+	},
+	"skill1_panel@common.scrolling_panel": {
+		"offset": [200, 0],
+        "$show_background": false,
+        "size": [300, 172],
+        "$scrolling_content": "info_ui.skill1",
+        "$scroll_size": [0, 172],
+        "$scrolling_pane_size":[300, 172],
+        "$scrolling_pane_offset": [ 2, 0 ],
+        "$scroll_bar_right_padding_size": [ 0, 0 ]
+    },
+	"skill1":{
+		"offset": [200, 0],
+		"type": "panel",
+		"clips_children": false,
+		"size": [275, 172],
+		"layer":1,
+		"controls": [
+			{
+				"skill_1_panel@common.scrolling_panel":{
+					"anchor_from": "top_middle",
+					"anchor_to": "top_middle",
+					"layer":29,
+					"offset": [0, -20],
+					"$show_background": false,
+					"size": [275, 20],
+					"$scrolling_content": "info_ui.skill_1_buttons",
+					"$scroll_size": [2, 20],
+					"$scrolling_pane_size":[275, 20],
+					"$scrolling_pane_offset": [ 2, 0 ],
+					"$scroll_bar_right_padding_size": [ 0, 0 ]
+				}
+			},	
+			{
+				"background":{
+					"texture": "textures/ui/watts/box",
+					"$size": [200, 172],
+					"type":"image",
+					"offset": [0, 0]
+				}
+			}
+		]
+	},
+				
+	"skill_1_buttons":{
+		"type": "panel",
+		"size": [275, 20],
+		"layer":1,
+		"offset": [ 0, 0 ],
+		"clips_children": true,
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+		"controls": [
+			{
+				"button1@watts_common.buttons_panel":{
+					"$size": [770, 20],
+					"$offset": [-495, 0],
+					"anchor_from": "top_left",
+					"anchor_to": "top_left"
+				}
+			}
+		]
+	}
+}

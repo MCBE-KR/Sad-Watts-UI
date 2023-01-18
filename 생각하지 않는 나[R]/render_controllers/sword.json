@@ -1,0 +1,35 @@
+{
+  "format_version": "1.10",
+  "render_controllers": {
+    "controller.render.sword1": {
+      "geometry": "Geometry.sword1",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Texture.sword1" ]
+    },
+    "controller.render.sword2": {
+      "geometry": "Geometry.sword2",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Texture.sword2" ]
+    },
+    "controller.render.black_sword1": {
+      "geometry": "Geometry.black_sword1",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Texture.black_sword1" ]
+    },
+    "controller.render.black_sword2": {
+      "geometry": "Geometry.black_sword2",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Texture.black_sword2" ]
+    },
+    "controller.render.white": {
+      "geometry": "Geometry.white",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Texture.white" ]
+    },
+    "controller.render.wing": {
+      "geometry": "Geometry.wing",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Texture.wing" ]
+    }
+  }
+}

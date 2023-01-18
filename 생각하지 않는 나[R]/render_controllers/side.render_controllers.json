@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10",
+  "render_controllers": {
+    "controller.render.nemo": {
+      "arrays": {
+        "textures": {
+          "array.bow_texture_frames": [
+            "texture.default",
+            "texture.nemo0",
+            "texture.nemo1",
+            "texture.nemo2"
+          ]
+        },
+        "geometries": {
+          "array.bow_geo_frames": [
+            "geometry.default",
+            "geometry.nemo0",
+            "geometry.nemo1",
+            "geometry.nemo2"
+          ]
+        }
+      },
+      "geometry": "array.bow_geo_frames[query.is_using_item]",
+      "materials": [ { "*": "variable.is_enchanted ? material.enchanted : material.default" } ],
+      "textures": [ "array.bow_texture_frames[query.is_using_item]", "texture.enchanted" ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "resource_pack_name": "vanilla",
+  "texture_data": {
+    "nemo": {
+      "textures": "textures/nemo"
+    },
+    "nemo0": {
+      "textures": "textures/nemo0"
+    },
+    "nemo1": {
+      "textures": "textures/nemo1"
+    },
+    "nemo2": {
+      "textures": "textures/nemo2"
+    },
+    "plus": {
+      "textures": "textures/ui/watts/plus"
+    }
+  },
+  "texture_name": "atlas.items"
+}

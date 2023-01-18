@@ -1,0 +1,19 @@
+{
+   "format_version": "1.19.40",
+   "minecraft:item": {
+    "description": {
+      "identifier": "watts:skill4",
+      "category": "equipment"
+    },
+      "components": {
+         "minecraft:icon": {
+            "texture": "plus"
+         },
+         "minecraft:display_name": {
+            "value": "skill4"
+         }
+      },
+      "events": {
+      }
+   }
+}

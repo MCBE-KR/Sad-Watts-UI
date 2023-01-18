@@ -1,0 +1,21 @@
+{
+  "namespace": "crafting_pocket",
+  "inventory_screen_pocket@crafting_pocket.inventory_screen_pocket_base": {
+    "send_telemetry": false,
+    "$screen_content": "crafting_pocket.recipe_inventory_screen_content_pocket",
+    "$screen_bg_content": "common.screen_background",
+    "$top_half_variant": "crafting.survival_panel_top_half"
+  },
+  "crafting_screen_pocket@crafting_pocket.inventory_screen_pocket_base": {
+    "send_telemetry": false,
+    "$screen_content": "crafting_pocket.recipe_inventory_screen_content_pocket",
+    "$screen_bg_content": "common.screen_background",
+    "$top_half_variant": "crafting.survival_panel_top_half"
+  },
+  "survival_inventory_grid": {
+      "size": [ 108, 72 ],
+      "controls": [
+        {"pocket_inven@inven_common.pocket_inven":{}}
+      ]
+  }
+}

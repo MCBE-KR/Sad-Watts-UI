@@ -1,0 +1,19 @@
+{
+   "format_version": "1.19.40",
+   "minecraft:item": {
+    "description": {
+      "identifier": "watts:skill3",
+      "category": "equipment"
+    },
+      "components": {
+         "minecraft:icon": {
+            "texture": "plus"
+         },
+         "minecraft:display_name": {
+            "value": "skill3"
+         }
+      },
+      "events": {
+      }
+   }
+}

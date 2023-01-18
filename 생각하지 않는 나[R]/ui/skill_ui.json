@@ -1,0 +1,472 @@
+{
+    "namespace": "skill_ui",	
+  "total": {
+    "type": "panel",
+    "size": ["100%", "100%"],
+		"bindings": [
+			{
+				"binding_name": "#title_text",
+				"binding_type": "global"
+			},
+			{
+				"binding_type": "view",
+				"source_property_name": "(#title_text = 'watts.ui.skill_ui')",
+				"target_property_name": "#visible"
+			}
+		],	
+    "controls": [
+      {"long_form@long_form":{}}
+    ]
+  },
+    "long_form@skill_ui.main_panel_no_buttons": {
+        "$title_panel": "skill_ui.standard_title_label",
+        "$title_size": [ "100% - 14px", 0 ],
+        "size": ["100%", "100%"],
+        "$text_name": "#title_text",
+        "$title_text_binding_type": "none",
+        "$child_control": "skill_ui.long_form_panel",
+        "layer": 2
+      },
+    "long_form_panel" : {
+        "type": "stack_panel",
+        "size": ["100%", "100%"],
+        "orientation": "vertical",
+        "layer": 1,
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "controls": [
+          
+          {
+            "scrolling_panel@common.scrolling_panel": {
+              "$draggable":"horizontal",
+              "anchor_to": "top_middle",
+              "anchor_from": "top_middle",
+              "$show_background": false,
+              "size": [ "100%", "100%" ],
+              "$scrolling_content": "skill_ui.long_form_scrolling_content",
+              "$scroll_size": [ 5, "100% - 4px" ],
+              "$scrolling_pane_size": [ "100% - 4px", "100% - 2px" ],
+              "$scrolling_pane_offset": [ 2, 0 ],
+              "$scroll_bar_right_padding_size": [ 0, 0 ]
+            }
+          }
+        ]
+    },
+    "long_form_scrolling_content": {
+        "type": "panel",
+        "size": [ "100% - 4px", 400 ],
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "offset":[-50, 0],
+        "controls": [
+          {"prevent@single_skill_prevent":{"layer": 1010,"offset":["0%", 17]}},
+          {"skill_button@skill_button":{"layer": 1000,"offset":["0%", 12], "$offset":[0,0]}},
+          {"prevent@single_skill_prevent":{"layer": 1000,"offset":["15%", 42]}},
+          {"skill_button@skill_button":{"layer": 990,"offset":["15%", 37], "$offset":[0,-25]}},
+          {"prevent@single_skill_prevent":{"layer": 990,"offset":["30%", 17]}},
+          {"skill_button@skill_button":{"layer": 980,"offset":["30%", 12], "$offset":[0,-50]}},
+          {"prevent@single_skill_prevent":{"layer": 980,"offset":["45%", 42]}},
+          {"skill_button@skill_button":{"layer": 970,"offset":["45%", 37], "$offset":[0,-75]}},
+          {"prevent@single_skill_prevent":{"layer": 970,"offset":["60%", 17]}},
+          {"skill_button@skill_button":{"layer": 960,"offset":["60%", 12], "$offset":[0,-100]}},
+
+          {"v_line@v_line":{"size": [2, 163],"offset": ["0% + 62.5px", 37]}},
+
+          {"prevent@single_skill_prevent":{"layer": 960,"offset":["0% + 25px", 92]}},
+          {"skill_button@skill_button":{"layer": 950,"offset":["0% + 25px", 87], "$offset":[0,-125]}},
+          {"h_line@h_line":{"offset": ["0% + 62.5px", 99.5]}},
+          {"prevent@single_skill_prevent":{"layer": 950,"offset":["0% + 25px", 117]}},
+          {"skill_button@skill_button":{"layer": 940,"offset":["0% + 25px", 112], "$offset":[0,-150]}},
+          {"h_line@h_line":{"offset": ["0% + 62.5px", 124.5]}},
+          {"prevent@single_skill_prevent":{"layer": 940,"offset":["0% + 25px", 142]}},
+          {"skill_button@skill_button":{"layer": 930,"offset":["0% + 25px", 137], "$offset":[0,-175]}},
+          {"h_line@h_line":{"offset": ["0% + 62.5px", 149.5]}},
+          {"prevent@single_skill_prevent":{"layer": 930,"offset":["0% + 25px", 167]}},
+          {"skill_button@skill_button":{"layer": 920,"offset":["0% + 25px", 162], "$offset":[0,-200]}},
+          {"h_line@h_line":{"offset": ["0% + 62.5px", 174.5]}},
+
+          {"v_line@v_line":{"size": [2, 250],"offset": ["15% + 112.5px", 52]}},
+          
+          {"h_line@h_line":{"offset": ["15% + 112.5px",  252]}},
+          {"prevent@single_skill_prevent":{"layer": 920,"offset":["15% + 70px", 242.5]}},
+          {"skill_button@skill_button":{"layer": 910,"offset":["15% + 70px", 237.5], "$offset":[0,-225]}},
+          {"h_line@h_line":{"offset": ["15% + 112.5px",  277]}},
+          {"prevent@single_skill_prevent":{"layer": 910,"offset":["15% + 70px", 267.5]}},
+          {"skill_button@skill_button":{"layer": 900,"offset":["15% + 70px", 262.5], "$offset":[0,-250]}},
+          {"h_line@h_line":{"offset": ["15% + 112.5px",  302]}},
+          {"prevent@single_skill_prevent":{"layer": 900,"offset":["15% + 70px", 292.5]}},
+          {"skill_button@skill_button":{"layer": 890,"offset":["15% + 70px", 287.5], "$offset":[0,-275]}},
+
+          {"v_line@v_line":{"size": [2, 175],"offset": ["30% + 62.5px", 37]}},
+
+          {"prevent@single_skill_prevent":{"layer": 880,"offset":["30% + 25px", 92]}},
+          {"skill_button@skill_button":{"layer": 870,"offset":["30% + 25px", 87], "$offset":[0,-300]}},
+          {"h_line@h_line":{"offset": ["30% + 62.5px", 99.5]}},
+          {"prevent@single_skill_prevent":{"layer": 870,"offset":["30% + 25px", 117]}},
+          {"skill_button@skill_button":{"layer": 860,"offset":["30% + 25px", 112], "$offset":[0,-325]}},
+          {"h_line@h_line":{"offset": ["30% + 62.5px", 124.5]}},
+          {"prevent@single_skill_prevent":{"layer": 860,"offset":["30% + 25px", 142]}},
+          {"skill_button@skill_button":{"layer": 850,"offset":["30% + 25px", 137], "$offset":[0,-350]}},
+          {"h_line@h_line":{"offset": ["30% + 62.5px", 149.5]}},
+          {"prevent@single_skill_prevent":{"layer": 850,"offset":["30% + 25px", 167]}},
+          {"skill_button@skill_button":{"layer": 840,"offset":["30% + 25px", 162], "$offset":[0,-375]}},
+          {"h_line@h_line":{"offset": ["30% + 62.5px", 174.5]}},
+
+          {"v_line@v_line":{"size": [2, 275],"offset": ["45% + 112.5px", 52]}},
+
+          {"h_line@h_line":{"offset": ["45% + 112.5px",  252]}},
+          {"prevent@single_skill_prevent":{"layer": 840,"offset":["45% + 70px", 242.5]}},
+          {"skill_button@skill_button":{"layer": 830,"offset":["45% + 70px", 237.5], "$offset":[0,-400]}},
+          {"h_line@h_line":{"offset": ["45% + 112.5px",  277]}},
+          {"prevent@single_skill_prevent":{"layer": 830,"offset":["45% + 70px", 267.5]}},
+          {"skill_button@skill_button":{"layer": 820,"offset":["45% + 70px", 262.5], "$offset":[0,-425]}},
+          {"h_line@h_line":{"offset": ["45% + 112.5px",  302]}},
+          {"prevent@single_skill_prevent":{"layer": 820,"offset":["45% + 70px", 292.5]}},
+          {"skill_button@skill_button":{"layer": 810,"offset":["45% + 70px", 287.5], "$offset":[0,-450]}},
+          {"h_line@h_line":{"offset": ["45% + 112.5px",  327]}},
+          {"prevent@single_skill_prevent":{"layer": 810,"offset":["45% + 70px", 317.5]}},
+          {"skill_button@skill_button":{"layer": 800,"offset":["45% + 70px", 312.5], "$offset":[0,-475]}},
+
+          {"v_line@v_line":{"size": [2, 162.5],"offset": ["60% + 62.5px", 37]}},
+
+          {"prevent@single_skill_prevent":{"layer": 800,"offset":["60% + 25px", 92]}},
+          {"skill_button@skill_button":{"layer": 790,"offset":["60% + 25px", 87], "$offset":[0,-500]}},
+          {"h_line@h_line":{"offset": ["60% + 62.5px", 99.5]}},
+          {"prevent@single_skill_prevent":{"layer": 790,"offset":["60% + 25px", 117]}},
+          {"skill_button@skill_button":{"layer": 780,"offset":["60% + 25px", 112], "$offset":[0,-525]}},
+          {"h_line@h_line":{"offset": ["60% + 62.5px", 124.5]}},
+          {"prevent@single_skill_prevent":{"layer": 780,"offset":["60% + 25px", 142]}},
+          {"skill_button@skill_button":{"layer": 770,"offset":["60% + 25px", 137], "$offset":[0,-550]}},
+          {"h_line@h_line":{"offset": ["60% + 62.5px", 149.5]}},
+          {"prevent@single_skill_prevent":{"layer": 770,"offset":["60% + 25px", 167]}},
+          {"skill_button@skill_button":{"layer": 760,"offset":["60% + 25px", 162], "$offset":[0,-575]}},
+          {"h_line@h_line":{"offset": ["60% + 62.5px", 174.5]}},
+          {"prevent@single_skill_prevent":{"layer": 760,"offset":["60% + 25px", 192]}},
+          {"skill_button@skill_button":{"layer": 750,"offset":["60% + 25px", 187], "$offset":[0,-600]}},
+          {"h_line@h_line":{"offset": ["60% + 62.5px", 199.5]}},
+
+          {"prevent@single_skill_prevent":{"layer": 750,"offset":["0% + 50px", 200]}},
+          {"skill_button@skill_button":{"layer": 740,"offset":["0% + 50px", 200], "$offset":[0,-625]}},
+          {"h_line@h_line":{"offset": ["0% + 62.5px", 200], "size": [50, 2]}},
+          {"h_line@h_line":{"offset": ["0% + 150px", 212], "size": ["30%-86px", 2]}},
+          {"connect1@connect1":{"offset": ["15% + 109.5px", 209]}},
+          
+          {"v_line@v_line":{"size": [2, 42.5],"offset": ["0% + 62.5px", 220]}},
+          {"prevent@single_skill_prevent":{"layer": 740,"offset":["0% + 25px", 250]}},
+          {"skill_button@skill_button":{"layer": 730,"offset":["0% + 25px", 250], "$offset":[0,-650]}},
+          {"h_line@h_line":{"offset": ["0% + 62.5px", 220], "size": [62.5, 2]}},
+          {"h_line@h_line":{"offset": ["0% + 62.5px", 262.5], "size": [12.5, 2]}}
+        ]
+    },
+    "connect1":{
+      "type": "image",
+      "anchor_from": "top_left",
+      "anchor_to": "top_left",
+      "layer": 2,
+      "size": [8, 8],
+      "offset": [0, 0],
+      "texture": "textures/ui/watts/connect1"
+    },
+    "h_line":{
+      "type": "image",
+      "anchor_from": "top_left",
+      "anchor_to": "top_left",
+      "layer": 2,
+      "size": [12.5, 2],
+      "offset": [0, 0],
+      "texture": "textures/ui/watts/line"
+    },
+    "v_line":{
+      "type": "image",
+      "anchor_from": "top_left",
+      "anchor_to": "top_left",
+      "layer": 2,
+      "size": [2, 137.5],
+      "offset": [0, 0],
+      "texture": "textures/ui/watts/line"
+    },
+    "skill_box@common_dialogs.dialog_background_hollow_common": {
+      "size": [ "100%", "100%" ],
+      "texture": "textures/ui/watts/box"
+    },
+    "main_panel_no_buttons": {
+      "type": "panel",
+      "anchor_from": "center",
+      "anchor_to": "center",
+      "$text_name|default": "",
+      "$panel_indent_size|default": [ "100% - 16px", "100% - 31px" ],
+      "$custom_background|default": "skill_box",
+      "controls": [
+        {
+          "common_panel@skill_ui.common_panel": {}
+        },
+        {
+          "title_label@common_dialogs.title_label": {}
+        },
+        {
+          "panel_indent": {
+            "type": "panel",
+            "size": "$panel_indent_size",
+            "offset": [ 0, 23 ],
+            "anchor_from": "top_middle",
+            "anchor_to": "top_middle",
+            "controls": [
+              { "inside_header_panel@$child_control": {} }
+            ]
+          }
+        }
+      ]
+    },
+    "common_panel@common.common_panel": {
+      "controls": [
+        {
+          "bg_image@skill_box": {
+            "layer": 1
+          }
+        },
+        {
+          "dialog_divider@common.dialog_divider": {
+            "visible": "$show_divider",
+            "anchor_from": "top_left",
+            "anchor_to": "top_left",
+            "offset": "$divider_offset",
+            "size": "$divider_size",
+            "bindings": [
+              {
+                "binding_name": "$divider_visible_binding_name",
+                "binding_name_override": "#visible",
+                "binding_type": "$divider_visible_binding_type"
+              }
+            ]
+          }
+        },
+        {
+          "close_button_holder": {
+            "type": "panel",
+            "ignored": "(not $show_close_button)",
+            "controls": [
+              {
+                "close@watts_common.close_button": {
+                  "layer": "$close_button_layer",
+                  "offset": "$close_button_offset",
+                  "ignored": "$use_compact_close_button"
+                }
+              },
+              {
+                "compact_close@watts_common.compact_close_button": {
+                  "layer": "$close_button_layer",
+                  "offset": "$close_button_offset",
+                  "ignored": "(not $use_compact_close_button)"
+                }
+              }
+            ],
+            "bindings": [
+              {
+                "binding_name": "$close_button_visible_binding_name",
+                "binding_name_override": "#visible"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "single_skill_prevent":  {
+      "type": "panel",
+      "size": [125, 10000],
+      "offset": [0, 0],
+      "anchor_from": "top_left",
+      "anchor_to": "top_left",
+      "controls": [
+        {"single_skill_prevent@prevent": {}}
+      ]
+    },
+    "prevent": {
+      "type": "button",
+      "prevent_touch_input": true,
+      "anchor_from": "bottom_left",
+      "anchor_to": "bottom_left",
+      "size": [125, 10000],
+      "offset": [0, -10000]
+    },
+	"skill_button":  {
+    "type": "panel",
+		"size": [125, 25],
+    "offset": [0,0],
+    "clips_children": true,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      {"skill_buttons_panel@skill_buttons_panel": {}},
+      {"single_skill_prevent": {      
+      "type": "button",
+      "prevent_touch_input": true,
+      "anchor_from": "top_right",
+      "anchor_to": "top_right",
+      "offset": [0,25],
+      "size": [125, 5]}}
+    ]
+  },
+	"skill_buttons_panel": {
+		"type": "stack_panel",
+		"size": "$size",
+		"$size|default": ["100% - 4px", "100%c"],
+		"offset": "$offset",
+		"$offset|default": [0, 0],
+		"orientation": "vertical",
+		"anchor_from": "top_middle",
+		"anchor_to": "top_middle",
+	
+		"factory":{
+		  "name": "buttons",
+		  "control_name": "skill_ui.dynamic_button"
+		},
+	
+		"collection_name": "form_buttons",
+		"bindings": [
+		  {
+			"binding_name": "#form_button_length",
+			"binding_name_override": "#collection_length"
+		  }
+		]
+	},
+	"dynamic_button": {
+		"type": "panel",
+		"size": [125, 25],
+		"controls":[{
+      "panel_name": {
+        "type": "panel",
+			  "anchor_from": "bottom_center",
+			  "anchor_to": "bottom_center",
+        "size": [25, 25],
+        "bindings": [
+          {
+            "binding_type": "view",
+            "source_control_name": "image",
+            "resolve_sibling_scope": true,
+            "source_property_name": "(not (#texture = ''))",
+            "target_property_name": "#visible"
+          }
+        ],
+
+        "controls": [
+          {
+            "image": {
+              "type": "image",
+              "layer": 2,
+              "size": [25, 25],
+              "offset": [0, 0],
+              "bindings":[
+                {
+                  "binding_name": "#form_button_texture",
+                  "binding_name_override": "#texture",
+                  "binding_type": "collection",
+                  "binding_collection_name": "form_buttons"
+                },
+                {
+                  "binding_name": "#form_button_texture_file_system",
+                  "binding_name_override": "#texture_file_system",
+                  "binding_type": "collection",
+                  "binding_collection_name": "form_buttons"
+                },
+                {
+                  "binding_type": "view",
+                  "source_property_name": "(not ((#texture = '') or (#texture = 'loading')))",
+                  "target_property_name": "#visible"
+                }
+              ]
+            }
+          },
+          {
+            "progress@progress.progress_loading_bars": {
+              "size": [30, 4],
+              "offset": [-2, 16],
+              "bindings":[
+                {
+                  "binding_type": "view",
+                  "source_control_name": "image",
+                  "resolve_sibling_scope": true,
+                  "source_property_name": "(#texture = 'loading')",
+                  "target_property_name": "#visible"
+                }
+              ]
+            }
+          }
+        ]
+      }
+      },
+		  {
+			"form_button@watts_common.light_text_button": {
+			  "$pressed_button_name": "button.form_button_click",
+			  "anchor_from": "top_right",
+			  "anchor_to": "top_right",
+			  "size": [50, 20],
+        "offset": [-2, 5],
+			  "$button_text": "#form_button_text",
+        "$button_font_scale_factor":0.7,
+			  "$button_text_binding_type": "collection",
+			  "$button_text_grid_collection_name": "form_buttons",
+			  "$button_text_max_size": [ 50, 20 ],
+			  "bindings": [
+				{
+				  "binding_type": "collection_details",
+				  "binding_collection_name": "form_buttons"
+				}
+			  ],
+			  "layer": 1,
+			  "controls": [
+				  {
+					  "default@$button_state_panel": {
+						"$new_ui_button_texture": "textures/ui/watts/box",
+						"$text_color|default": [1.0, 1.0, 1.0],
+						"$secondary_text_color": "$light_button_secondary_default_text_color",
+						"$content_alpha": "$default_content_alpha",
+						"$border_color": [1.0, 1.0, 1.0, 0.0],
+						"$border_layer": 2,
+						"$default_state": true,
+						"$button_alpha": "$default_button_alpha",
+						"layer": 1
+					  }
+					},
+					{
+					  "hover@$button_state_panel": {
+						"$new_ui_button_texture": "textures/ui/watts/box",
+						"$text_color|default": [1.0, 1.0, 1.0],
+						"$secondary_text_color": "$light_button_secondary_hover_text_color",
+						"$content_alpha": 1,
+						"$border_color": [1.0, 1.0, 1.0, 0.0],
+						"$border_layer": 4,
+						"$hover_state": true,
+						"$button_alpha": "$default_hover_alpha",
+						"layer": 4
+					  }
+				  }
+			  ]
+			}
+		  }
+		]
+	},
+  "standard_title_label": {
+    "type": "label",
+    "size": [ "default", 0 ],
+    "color": [0,0,0,0],
+    "text": "$text_name",
+    "layer": 4,
+    "shadow": false,
+    "property_bag": {
+      "#tts_dialog_title": "$text_name"
+    },
+    "bindings": [
+      {
+        "binding_type": "$title_text_binding_type",
+        "binding_condition": "$title_binding_condition",
+        "binding_name": "$text_name",
+        "binding_name_override": "$text_name"
+      },
+      {
+        "binding_type": "global",
+        "binding_condition": "once",
+        "binding_name": "#tts_dialog_title"
+      }
+    ]
+  }
+}

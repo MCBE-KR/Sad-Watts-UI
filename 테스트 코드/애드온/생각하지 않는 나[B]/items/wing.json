@@ -1,0 +1,18 @@
+{
+   "format_version": "1.19.40",
+   "minecraft:item": {
+    "description": {
+      "identifier": "watts:wing",
+      "category": "equipment"
+    },
+      "components": {
+         "minecraft:icon": {
+            "texture": "plus",
+            "frame": 4
+         },
+         "minecraft:display_name": {
+            "value": "wing"
+         }
+      }
+   }
+}

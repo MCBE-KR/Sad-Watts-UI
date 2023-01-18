@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10",
+  "render_controllers": {
+    "controller.render.ring1": {
+      "geometry": "Geometry.ring1",
+      "materials": [ { "*": "variable.is_enchanted ? Material.enchanted : Material.default" } ],
+      "textures": [ "Texture.ring1", "Texture.enchanted" ]
+    },
+    "controller.render.ring2": {
+      "geometry": "Geometry.ring2",
+      "materials": [ { "*": "variable.is_enchanted ? Material.enchanted : Material.default" } ],
+      "textures": [ "Texture.ring2", "Texture.enchanted" ]
+    },
+    "controller.render.ring3": {
+      "geometry": "Geometry.ring3",
+      "materials": [ { "*": "variable.is_enchanted ? Material.enchanted : Material.default" } ],
+      "textures": [ "Texture.ring3", "Texture.enchanted" ]
+    }
+  }
+}

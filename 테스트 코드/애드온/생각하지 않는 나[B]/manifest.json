@@ -1,0 +1,47 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "네모네모",
+    "description": "와츠의 테스트 팩",
+    "uuid": "063ea852-c2d7-4e48-a977-7d5c4ee56cb2",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      13,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "6a1b66b5-e0d7-4ce3-a171-04a9a08c4129",
+      "version": [1,0,0]
+    },
+    {
+        "description": "Script that implements basic starter tests.",
+        "type": "script",
+        "language": "javascript",
+        "uuid": "1a1b53fc-5653-4a75-91b7-9cdF027674ae",
+        "version": [0, 0, 1],
+        "entry": "scripts/ui.js"
+    }
+  ],
+  "dependencies": [
+    {
+      "version": [1,0,0],
+      "uuid": "b3554e14-61ad-11ed-9b6a-0242ac120002"
+    },
+    {
+        "module_name": "@minecraft/server",
+        "version": "1.1.0-beta"
+    },
+    {
+        "module_name": "@minecraft/server-ui",
+        "version": "1.0.0-beta"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "네모네모",
+		"description": "와츠의 테스트 팩",
+		"uuid": "b3554e14-61ad-11ed-9b6a-0242ac120002",
+		"version": [
+			1,
+			0,
+			0
+		],
+		"min_engine_version": [
+			1,
+			13,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "66bf1680-3aad-45c8-87ea-60a33a1945f1",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"version": [
+				1,
+				0,
+				0
+			],
+			"uuid": "063ea852-c2d7-4e48-a977-7d5c4ee56cb2"
+		}
+	]
+}

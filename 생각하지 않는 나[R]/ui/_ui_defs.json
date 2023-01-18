@@ -1,0 +1,13 @@
+{
+  "ui_defs": [
+    "ui/info_ui.json",
+    "ui/server_form.json",
+    "ui/skill_ui.json",
+    "ui/watts_common.json",
+    "ui/hud_screen.json",
+    "ui/inven_common.json",
+    "ui/inventory_screen_pocket.json",
+    "ui/inventory_screen.json",
+    "ui/chest_screen.json"
+  ]
+}
