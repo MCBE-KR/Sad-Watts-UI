@@ -1,5 +1,5 @@
 import { ActionFormData, MessageFormData  } from "@minecraft/server-ui"
-import { world, DynamicPropertiesDefinition, MinecraftEntityTypes, ItemTypes, ItemStack } from '@minecraft/server';
+import { world, DynamicPropertiesDefinition, MinecraftEntityTypes, MinecraftItemTypes, ItemStack } from '@minecraft/server';
 
 
 const stat = new ActionFormData()
@@ -26,7 +26,7 @@ const skill = new ActionFormData()
   .button("단검술", "textures/ui/watts/plus")
   .button("검술", "textures/ui/watts/plus")
   .button("도술", "textures/ui/watts/plus")
-  .button("칭술", "textures/ui/watts/plus")
+  .button("창술", "textures/ui/watts/plus")
   
   .button("연사", "textures/ui/watts/plus")
   .button("속도", "textures/ui/watts/plus")
@@ -62,7 +62,7 @@ const arr = [
   "단검술", 
   "검술", 
   "도술", 
-  "칭술", 
+  "창술", 
   "연사", 
   "속도", 
   "관통", 
@@ -148,37 +148,39 @@ const formResult = (ans, player) =>{
 }
 
 const init = (player) => {
-  for (let i = 1; i < 10; i++){
-    if(!player.getDynamicProperty(`slot${i}`)){
-      player.setDynamicProperty(`slot${i}`, `None`)
-    }
-
-    if(player.getDynamicProperty(`slot${i}`) == "None") {
-      player.getComponent("minecraft:inventory").container.setItem(i - 1, new ItemStack(ItemTypes.get("minecraft:barrier"), 1, 0))
-    }
+  for (let i = 0; i < 18; i++){
+    player.getComponent("minecraft:inventory").container.setItem(i, new ItemStack(MinecraftItemTypes.acaciaBoat, 0))
   }
   for (let i = 1; i < 9; i++){
     if(!player.getDynamicProperty(`skill${i}`)){
       player.setDynamicProperty(`skill${i}`, `None`)
     }
     if(player.getDynamicProperty(`skill${i}`) == "None") {
-      player.getComponent("minecraft:inventory").container.setItem(i + 8, new ItemStack(ItemTypes.get("minecraft:barrier"), 1, 0))
+      player.runCommandAsync(`give @s minecraft:barrier 64 0 {"item_lock":{"mode":"lock_in_slot"}, "keep_on_death": {} }`)
     }
   }
-  player.getComponent("minecraft:inventory").container.setItem(8, new ItemStack(ItemTypes.get("minecraft:book"), 1, 0))
-}
+  player.runCommandAsync(`give @s minecraft:book 1 0 {"item_lock":{"mode":"lock_in_slot"}, "keep_on_death": {} }`)
+  for (let i = 1; i < 10; i++){
+    if(!player.getDynamicProperty(`slot${i}`)){
+      player.setDynamicProperty(`slot${i}`, `None`)
+    }
 
-world.events.playerJoin.subscribe((event) => {
-  const player = event.player;
-  //init(player)
-});
+    if(player.getDynamicProperty(`slot${i}`) == "None") {
+      player.runCommandAsync(`give @s minecraft:barrier 64 0 {"item_lock":{"mode":"lock_in_slot"}, "keep_on_death": {} }`)
+    }
+  }
+}
 
 
 world.events.beforeChat.subscribe((event) => {
   const player = event.sender;
   const msg = event.message;
-  if(msg == "책 소환"){
-    player.getComponent("minecraft:inventory").container.setItem(8, new ItemStack(ItemTypes.get("minecraft:book"), 1, 0))
+  if(msg == "summon book"){
+    player.getComponent("minecraft:inventory").container.setItem(8, new ItemStack(MinecraftItemTypes.acaciaBoat, 0))
+    player.runCommandAsync(`give @s minecraft:book 1 0 {"item_lock":{"mode":"lock_in_slot"}, "keep_on_death": {} }`)
+  }
+  if(msg == "load skill"){
+    init(player)
   }
 });
 
