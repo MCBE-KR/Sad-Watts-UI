@@ -140,10 +140,10 @@ const formResult = (ans, player) =>{
     });
   }
   if(ans == 2){
-    armorSlot.show(player)
+    skillSlot.show(player)
   }
   if(ans == 3){
-    skillSlot.show(player)
+    armorSlot.show(player)
   }
 }
 

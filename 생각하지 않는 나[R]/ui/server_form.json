@@ -28,7 +28,7 @@
 							},
 							{
 								"binding_type": "view",
-								"source_property_name": "(not ((#title_text = 'watts.ui.info_ui')or (#title_text = 'watts.ui.skill_ui')))",
+								"source_property_name": "(not (#title_text > 'watts.ui.'))",
 								"target_property_name": "#visible"
 							}
 						],
